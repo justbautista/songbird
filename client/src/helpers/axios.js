@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
-const base = process.env.REACT_APP_LOCAL || process.env.REACT_APP_SERVER
+const base = import.meta.env.VITE_LOCAL || import.meta.env.VITE_SERVER;
 const instance = axios.create({
-    baseURL: base
-})
+    baseURL: base,
+});
 
 export default instance;
